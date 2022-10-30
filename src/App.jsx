@@ -1,8 +1,12 @@
-import Card from './Components/Card';
+import InputForm from "./Components/Input/InputForm";
+
+import styles from './App.module.css'
 
 function App() {
     return(
-        <Card><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, blanditiis fugiat neque itaque culpa saepe beatae placeat amet omnis nobis.</p></Card>
+        <div className={styles.app}>
+            <InputForm />
+        </div>
     );
 }
 
