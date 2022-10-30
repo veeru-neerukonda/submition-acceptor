@@ -3,13 +3,12 @@
     position: relative;
     flex-direction: column;
     row-gap: .6rem;
-
-    min-width: 450px;
 }
 
 .input{
     border: .2rem solid black;
     padding: 8px;
+    width: 100%;
 
     font-size: 1.8rem;
     text-transform: capitalize;

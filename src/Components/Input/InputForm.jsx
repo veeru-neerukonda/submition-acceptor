@@ -50,12 +50,16 @@ function InputForm(props){
             //clear all the fields once submition is handled
             setName("");
             setAge("");
+            setAgeInError(false);
+            setNameInError(false);
+            setAgeErrorMessage('this message was set while clearing the input form after a successful submition; donot ever display this message');
+            setNameErrorMessage('this message was set while clearing the input form after a successful submition; donot ever display this message');
         }
     }
 
     return(
         <Card>
-            <form className={styles.form} onSubmit={submitEventHandler}>
+            <form className={`${styles.form} width-constrainer`} onSubmit={submitEventHandler}>
                 <TextInput
                     onChange={newName => setName(newName)} 
                     inError={nameInError} 
