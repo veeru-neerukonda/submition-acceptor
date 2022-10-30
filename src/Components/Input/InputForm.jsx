@@ -31,8 +31,7 @@ function InputForm(props){
             setAgeInError(true);
             inBadState = true;
         }
-
-        if(!Number.parseInt(age)){
+        else if(!Number.parseInt(age)){
             setAgeErrorMessage("please enter a valid age");
             setAgeInError(true);
             inBadState = true;
