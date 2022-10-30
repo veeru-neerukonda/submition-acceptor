@@ -27,15 +27,34 @@ function InputForm(props){
             setNameInError(true);
             inBadState = true;
         }
+        else if(!isNaN(name[0])){
+            setNameErrorMessage("the name field cannot start with a number");
+            setNameInError(true);
+            inBadState = true;
+        }
+        else{
+            setNameErrorMessage("this message was set after determining that there is no error in the Inputted Name; the message must not be displayed as such");
+            setNameInError(false);
+        }
+
         if(age === ""){
             setAgeErrorMessage("the age field cannot be left empty.")
             setAgeInError(true);
             inBadState = true;
         }
-        else if(!Number.parseInt(age)){
+        else if(isNaN(age)){
             setAgeErrorMessage("please enter a valid age");
             setAgeInError(true);
             inBadState = true;
+        }
+        else if(Number.parseInt(age) < 0){
+            setAgeErrorMessage("Age value cannot be negative");
+            setAgeInError(true);
+            inBadState = true;
+        }
+        else{
+            setAgeErrorMessage("this message was set after determining that there is no error in the Inputted Age; the message must not be displayed as such");
+            setAgeInError(false);
         }
 
         //only accept submition if it is not in a bad state
