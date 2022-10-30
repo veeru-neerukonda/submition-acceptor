@@ -85,17 +85,19 @@ function InputForm(props){
                     errorMessage={nameErrorMessage} 
                     label="Name"
                     value={name}
+                    id="nameInputField"
                     placeholder="enter your full name here">
                 </TextInput>
-                <TextInput 
+                <TextInput
                     onChange={newAge => setAge(newAge)} 
                     inError={ageInError} 
                     errorMessage={ageErrorMessage} 
                     label="Age"
                     value={age}
+                    id="ageInputField"
                     placeholder="enter your age here">
                 </TextInput>
-                <Button label="Submit" className="ml-auto" />
+                <Button type="submit" label="Submit" className="ml-auto" />
             </form>
         </Card>
     );
