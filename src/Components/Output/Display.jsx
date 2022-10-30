@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './Display.module.css';
 
 import Card from '../UI/Card';
 
@@ -11,8 +12,10 @@ function Display(props) {
 
     return (
         <Card>
-            <div className='width-constrainer'>
-                {props.submitions.map(submition => <h1 key={submition.id}>{`${submition.name} ${submition.age}`}</h1>)}    
+            <div className={`${styles.column} width-constrainer`}>
+                {props.submitions.map(submition => <h1 className={styles.row} key={submition.id}>
+                    <span>{submition.name}</span><span>{submition.age}</span>
+                </h1>)}    
             </div>
         </Card>
     );

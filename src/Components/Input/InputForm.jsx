@@ -58,7 +58,7 @@ function InputForm(props){
     }
 
     return(
-        <Card>
+        <Card className="mt-10">
             <form className={`${styles.form} width-constrainer`} onSubmit={submitEventHandler}>
                 <TextInput
                     onChange={newName => setName(newName)} 

@@ -1,0 +1,14 @@
+.column{
+    display: flex;
+    flex-direction: column;
+    row-gap: .8rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row span{
+    text-transform: capitalize;
+}

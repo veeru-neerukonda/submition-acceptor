@@ -2,6 +2,10 @@
     margin-left: auto;
 }
 
+.mt-10{
+    margin-top: 10rem;
+}
+
 .width-constrainer{
     width: 45rem;
 }
