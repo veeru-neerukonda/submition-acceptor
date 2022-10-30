@@ -5,7 +5,7 @@ import styles from './App.module.css'
 function App() {
     return(
         <div className={styles.app}>
-            <InputForm />
+            <InputForm onNewSubmition={submition => console.log(submition.id,submition.name,submition.age)} />
         </div>
     );
 }
