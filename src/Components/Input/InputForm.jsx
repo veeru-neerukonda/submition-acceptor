@@ -10,7 +10,8 @@ import styles from './InputForm.module.css'
 //* onNewSubmition: function(object: {id,name,age}) - a new submition  was successfully recieved by the input form in question
 function InputForm(props){
 
-    let name="",age="";
+    const [name, setName] = useState("");
+    const [age,setAge] = useState("");
     const [nameErrorMessage,setNameErrorMessage] = useState("");
     const [ageErrorMessage,setAgeErrorMessage] = useState("");
     const [nameInError,setNameInError] = useState(false)
@@ -45,24 +46,30 @@ function InputForm(props){
                     name,age
                 }
             );
+
+            //clear all the fields once submition is handled
+            setName("");
+            setAge("");
         }
     }
 
     return(
         <Card>
             <form className={styles.form} onSubmit={submitEventHandler}>
-                <TextInput 
-                    onChange={newName => name=newName} 
+                <TextInput
+                    onChange={newName => setName(newName)} 
                     inError={nameInError} 
                     errorMessage={nameErrorMessage} 
-                    label="Name" 
+                    label="Name"
+                    value={name}
                     placeholder="enter your full name here">
                 </TextInput>
                 <TextInput 
-                    onChange={newAge => age=newAge} 
+                    onChange={newAge => setAge(newAge)} 
                     inError={ageInError} 
                     errorMessage={ageErrorMessage} 
-                    label="Age" 
+                    label="Age"
+                    value={age}
                     placeholder="enter your age here">
                 </TextInput>
                 <Button label="Submit" className="ml-auto" />
