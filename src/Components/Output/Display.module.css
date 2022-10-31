@@ -11,4 +11,6 @@
 
 .row span{
     text-transform: capitalize;
+    font-size: 1.8rem;
+    font-weight: 600;
 }

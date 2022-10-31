@@ -12,11 +12,11 @@ function Display(props) {
 
     return (
         <Card>
-            <div className={`${styles.column} width-constrainer`}>
-                {props.submitions.map(submition => <h1 className={styles.row} key={submition.id}>
+            <ul className={`${styles.column} width-constrainer`}>
+                {props.submitions.map(submition => <li className={styles.row} key={submition.id}>
                     <span>{submition.name}</span><span>{submition.age}</span>
-                </h1>)}    
-            </div>
+                </li>)}    
+            </ul>
         </Card>
     );
 }
